@@ -2,6 +2,8 @@ let footer = document.createElement("footer");
 
 document.body.appendChild(footer);
 
+footer.id = "footer"; 
+
 let today = new Date();
 
 let thisYear = today.getFullYear();

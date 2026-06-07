@@ -4,6 +4,37 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+nav {
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+
+
+
+
+nav {
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+
+
 section {
     margin: 20px;
     padding: 20px;
@@ -50,7 +81,7 @@ h2 {
 
 #Connect a {
     background-color: #5c3d2e;
-    color: white;
+    color:white;
     padding: 10px;
     text-decoration: none;
     border-radius: 5px;
@@ -75,7 +106,7 @@ h1,
 h2 {
   font-size: 32px;
   font-weight: bold;
-  color: #333;
+  color: #333; 
 }
 
 form {
@@ -113,5 +144,25 @@ button {
   button {
     font-size: 18px;
     padding: 14px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+#footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #e8d8c9;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  #footer {
+    padding: 15px;
+    margin-top: 20px;
   }
 }
