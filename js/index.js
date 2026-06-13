@@ -72,5 +72,27 @@ messageForm.addEventListener("submit", function (event) {
 }); 
 
 
+    fetch("https://api.github.com/users/jessicasosa444-art/repos")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function(repositories) { console.log(repositories);
+    let projectSection = document.querySelector("#Projects");
+  
+    let projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement("li");
+
+      project.innerText = repositories[i].name;
+
+      projectList.appendChild(project);
+
+  }
+    })
+    .catch(function (error) {
+    console.error("An error occurred:", error);
+  });
+
 
 
