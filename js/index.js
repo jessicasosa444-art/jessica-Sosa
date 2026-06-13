@@ -91,8 +91,13 @@ messageForm.addEventListener("submit", function (event) {
   }
     })
     .catch(function (error) {
-    console.error("An error occurred:", error);
-  });
+  console.error("An error occurred:", error);
 
+  let projectSection = document.querySelector("#Projects");
 
+  let errorMessage = document.createElement("p");
+  errorMessage.innerText = "Sorry, projects could not be loaded at this time.";
+
+  projectSection.appendChild(errorMessage);
+    });
 
