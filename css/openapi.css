@@ -1,37 +1,37 @@
 body {
-    background-color: #f7f3ee;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 20px;
+  background-color: #f7f3ee;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 20px;
 }
 
 nav {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #5c3d2e;
-    font-weight: bold;
+  text-decoration: none;
+  color: #5c3d2e;
+  font-weight: bold;
 }
 
 button {
-    margin: 10px;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 #weather-results {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #e8d8c9;
-    border-radius: 8px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e8d8c9;
+  border-radius: 8px;
 }
 
 @media (max-width: 600px) {
-    button {
-        width: 100%;
-    }
+  button {
+    width: 100%;
+  }
 }
