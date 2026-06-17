@@ -21,18 +21,6 @@ nav a {
 
 
 
-nav {
-  text-align: center;
-  padding: 15px;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
 
 
 section {
@@ -108,12 +96,6 @@ text-decoration: none;
     font-weight: bold;
 }
 
-h1,
-h2 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #333; 
-}
 
 form {
   margin-top: 20px;
