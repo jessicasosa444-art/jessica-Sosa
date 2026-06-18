@@ -12,7 +12,7 @@ currentButton.addEventListener("click", function () {
     })
     .then(function (data) {
       results.innerHTML = `
-    <h2>🌤️ Current Weather</h2>
+    <h2>🌤️ Current Weather in New York, NY </h2>
     <p>🌡️ Temperature: ${data.current.temperature_2m}°F</p>
     <p>💨 Wind Speed: ${data.current.wind_speed_10m} mph</p>
     `;
@@ -32,7 +32,7 @@ forecastButton.addEventListener("click", function () {
     })
     .then(function (data) {
       results.innerHTML = `
-    <h2>☀️ Today's Forecast</h2>
+    <h2>☀️ Today's Forecast for New York, NY </h2>
     <p>🔺 High: ${data.daily.temperature_2m_max[0]}°F</p>
     <p>🔻 Low: ${data.daily.temperature_2m_min[0]}°F</p>
     `;
