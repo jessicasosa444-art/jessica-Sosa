@@ -166,16 +166,28 @@ button {
   font-weight: bold;
 }
 
-#messages li {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-width: 100%;
-  margin-bottom: 15px;
+
+#messages ul {
+  max-width: 600px;
+  padding-left: 20px;
 }
 
+#messages li {
+  max-width: 600px;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#messages a,
 #messages span {
   display: block;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-width: 100%;
+  max-width: 600px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#messages button {
+  display: block;
+  margin-top: 10px;
 }
