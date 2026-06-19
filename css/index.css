@@ -18,11 +18,6 @@ nav a {
 }
 
 
-
-
-
-
-
 section {
     margin: 20px;
     padding: 20px;
@@ -81,14 +76,14 @@ text-decoration: none;
 }
 
 
-#Skills ul {
+#skills ul {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     padding: 0;
 }
 
-#Skills li {
+#skills li {
     list-style: none;
     background-color: #e8d8c9;
     padding: 10px 15px;
@@ -169,4 +164,30 @@ button {
   padding: 10px 15px;
   border-radius: 8px;
   font-weight: bold;
+}
+
+
+#messages ul {
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+#messages li {
+  max-width: 600px;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#messages a,
+#messages span {
+  display: block;
+  max-width: 600px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#messages button {
+  display: block;
+  margin-top: 10px;
 }
