@@ -2,7 +2,7 @@ let footer = document.createElement("footer");
 
 document.body.appendChild(footer);
 
-footer.id = "footer"; 
+footer.id = "footer";
 
 let today = new Date();
 
@@ -20,22 +20,18 @@ let skillsSection = document.querySelector("#skills");
 
 let skillsList = skillsSection.querySelector("ul");
 
-
 for (let i = 0; i < skills.length; i++) {
+  let skill = document.createElement("li");
 
-    let skill = document.createElement("li");
+  skill.innerText = skills[i];
 
-    skill.innerText = skills[i];
-
-    skillsList.appendChild(skill);
-
+  skillsList.appendChild(skill);
 }
 
 let messageForm = document.querySelector("form[name='leave_message']");
 
-
 messageForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+  event.preventDefault();
   let usersName = event.target.usersName.value;
   let usersEmail = event.target.usersEmail.value;
   let usersMessage = event.target.usersMessage.value;
@@ -44,60 +40,63 @@ messageForm.addEventListener("submit", function (event) {
 
   let messageSection = document.querySelector("#messages");
   let messageList = messageSection.querySelector("ul");
-    let newMessage = document.createElement("li");
-  
+  let newMessage = document.createElement("li");
 
-    newMessage.innerHTML = `
+  newMessage.innerHTML = `
     <a href="mailto:${usersEmail}">${usersName}</a>
     <span>${usersMessage}</span>
  `;
 
-    let removeButton = document.createElement("button");
-    removeButton.innerText = "remove";
-    removeButton.type = "button";
+  let removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
 
-
-    removeButton.addEventListener("click", function (event) {
+  removeButton.addEventListener("click", function (event) {
     let entry = event.target.parentNode;
     entry.remove();
-    });
+  });
 
-    newMessage.appendChild(removeButton);
-    messageList.appendChild(newMessage);
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
 
+  messageForm.reset();
+});
 
-
-    messageForm.reset();
-
-}); 
-
-
-    fetch("https://api.github.com/users/jessicasosa444-art/repos")
+fetch("https://api.github.com/users/jessicasosa444-art/repos")
   .then(function (response) {
     return response.json();
   })
-  .then(function(repositories) { console.log(repositories);
+
+  .then(function (repositories) {
+    console.log(repositories);
+
     let projectSection = document.querySelector("#Projects");
-  
+
     let projectList = projectSection.querySelector("ul");
 
     for (let i = 0; i < repositories.length; i++) {
       let project = document.createElement("li");
 
-      project.innerText = repositories[i].name;
+      let projectLink = document.createElement("a");
+
+      projectLink.href = repositories[i].html_url;
+      projectLink.innerText = repositories[i].name;
+      projectLink.target = "_blank";
+
+      project.appendChild(projectLink);
 
       projectList.appendChild(project);
+    }
+  })
 
-  }
-    })
-    .catch(function (error) {
-  console.error("An error occurred:", error);
+  .catch(function (error) {
+    console.error("An error occurred:", error);
 
-  let projectSection = document.querySelector("#Projects");
+    let projectSection = document.querySelector("#Projects");
 
-  let errorMessage = document.createElement("p");
-  errorMessage.innerText = "Sorry, projects could not be loaded at this time.";
+    let errorMessage = document.createElement("p");
+    errorMessage.innerText =
+      "Sorry, projects could not be loaded at this time.";
 
-  projectSection.appendChild(errorMessage);
-    });
-
+    projectSection.appendChild(errorMessage);
+  });
